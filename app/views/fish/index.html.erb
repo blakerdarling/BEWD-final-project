@@ -1,0 +1,26 @@
+<ul>
+	<% current_user.fish.each do |fish| %> 
+	<br>
+	<br>
+	<li><%= fish.date.strftime(" %a  %b #{fish.date.day.ordinalize}, %Y ") %><%= link_to "Edit", edit_fish_path(fish) %></li> 
+	<ul>
+		<% if fish.image_url != ''%>
+		<%= link_to fish.species, fish.image_url %></li>
+		<% else %>
+		<%= fish.species %>
+		<% end %>
+		<li>Lure:  <%= fish.lure %></li>
+		<li>Weight (lbs.):  <%= fish.weight %></li>
+		<li>Length (in.):  <%= fish.length %></li>
+		<li>Zip:  <%= fish.zip_code %></li>
+		<li><%= link_to "Map", "https://www.google.com/maps/preview/search/#{fish.zip_code}" , target:"_blank" %></li>
+		<li>Notes:  <%= fish.notes %></li>
+		<li>Weather: <%= fish.forecast %></li>
+	</ul>
+		<% end %>
+</ul>
+
+
+
+<br><%= link_to "New Fish", new_fish_path %>
+

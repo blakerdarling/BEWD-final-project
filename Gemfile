@@ -13,6 +13,19 @@ group :development do
 	gem 'sqlite3'
 end
 
+gem 'simple_form'
+
+gem 'forecast_io'
+
+gem 'geocoder'
+
+gem 'area'
+
+gem 'pry'
+
+# Devise for security
+gem 'devise', '~> 3.2.2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

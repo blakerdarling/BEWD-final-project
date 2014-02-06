@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2014-01-30 19:39:11
+  species: MyString
+  lure: MyString
+  weight: 9.99
+  length: 9.99
+  image_url: MyString
+  notes: MyText
+
+two:
+  date: 2014-01-30 19:39:11
+  species: MyString
+  lure: MyString
+  weight: 9.99
+  length: 9.99
+  image_url: MyString
+  notes: MyText

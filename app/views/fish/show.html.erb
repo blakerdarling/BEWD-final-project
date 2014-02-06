@@ -1,0 +1,33 @@
+<h1> Fish </h1>
+
+<p>
+	<%= @fish.date %>
+</p>
+	
+<p>
+	<%= @fish.species %>
+</p>
+
+<p>
+	<%= @fish.lure %>
+</p>
+
+<p>
+	<%= @fish.weight %>
+</p>
+
+<p>
+	<%= @fish.length %>
+</p>
+
+<p>
+	<%= @fish.notes %>
+</p>
+
+<p>
+	<%= @fish.zip_code %>
+</p>
+
+<%= link_to "Edit", edit_fish_path(@fish) %>
+<%= link_to "Delete", fish_path(@fish), method: :delete %>
+
