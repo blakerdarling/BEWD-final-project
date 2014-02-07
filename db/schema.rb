@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205012717) do
+ActiveRecord::Schema.define(version: 20140207003921) do
 
-  create_table "fish", force: true do |t|
+  create_table "catches", force: true do |t|
     t.datetime "date"
     t.string   "species"
     t.string   "lure"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140205012717) do
     t.integer  "zip_code"
   end
 
-  add_index "fish", ["user_id"], name: "index_fish_on_user_id"
+  add_index "catches", ["user_id"], name: "index_catches_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

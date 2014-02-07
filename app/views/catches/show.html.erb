@@ -1,0 +1,33 @@
+<h1> catch </h1>
+
+<p>
+	<%= @catch.date %>
+</p>
+	
+<p>
+	<%= @catch.species %>
+</p>
+
+<p>
+	<%= @catch.lure %>
+</p>
+
+<p>
+	<%= @catch.weight %>
+</p>
+
+<p>
+	<%= @catch.length %>
+</p>
+
+<p>
+	<%= @catch.notes %>
+</p>
+
+<p>
+	<%= @catch.zip_code %>
+</p>
+
+<%= link_to "Edit", edit_catch_path(@catch) %>
+<%= link_to "Delete", catch_path(@catch), method: :delete %>
+

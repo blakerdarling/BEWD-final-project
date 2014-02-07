@@ -1,0 +1,28 @@
+
+
+<ul>
+	<% current_user.catches.each do |catch| %> 
+	<br>
+	<br>
+	<li><%= catch.date.strftime(" %a  %b #{catch.date.day.ordinalize}, %Y ") %><%= link_to "Edit", edit_catch_path(catch) %></li> 
+	<ul>
+		<% if catch.image_url != ''%>
+		<%= link_to catch.species, catch.image_url %></li>
+		<% else %>
+		<%= catch.species %>
+		<% end %>
+		<li>Lure:  <%= catch.lure %></li>
+		<li>Weight (lbs.):  <%= catch.weight %></li>
+		<li>Length (in.):  <%= catch.length %></li>
+		<li>Zip:  <%= catch.zip_code %></li>
+		<li><%= link_to "Map", "https://www.google.com/maps/preview/search/#{catch.zip_code}" , target:"_blank" %></li>
+		<li>Notes:  <%= catch.notes %></li>
+		<li>Weather: <%= catch.forecast %></li>
+	</ul>
+		<% end %>
+</ul>
+
+
+
+<br><%= link_to "New Catch", new_catch_path %>
+

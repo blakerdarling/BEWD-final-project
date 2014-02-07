@@ -1,8 +1,8 @@
 LureLog::Application.routes.draw do
   devise_for :users
-  root 'fish#index'
+  root 'catches#index'
   resources :users
-  resources :fish
+  resources :catches
 
 
 

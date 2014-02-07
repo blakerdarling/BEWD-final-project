@@ -1,0 +1,44 @@
+<%= form_for @catch, url: catch_path(@catch), method: :patch do |f| %>
+    <p>
+    <%= f.label :date %> <%= f.date_select(:date, :order => [:month, :day, :year]) %>
+  </p>
+
+  <p>
+    <%= f.label :species %><br>
+    <%= f.text_field :species %>
+  </p>
+
+   <p>
+    <%= f.label :lure %><br>
+    <%= f.text_field :lure %>
+  </p>
+
+   <p>
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </p>
+
+   <p>
+    <%= f.label :length %><br>
+    <%= f.text_field :length %>
+  </p>
+
+ <p>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+ </p>
+
+ <p>
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :zip_code %>
+  </p>
+ 
+  <p>
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
