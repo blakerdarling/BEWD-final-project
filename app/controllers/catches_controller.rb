@@ -9,8 +9,8 @@ class CatchesController < ApplicationController
 
 	def create
 		@catch = Catch.create(catch_params)
-		current_user.catch << @catch
-		redirect_to catches_index_path
+		current_user.catches << @catch
+		redirect_to catches_path
 	end
 
 	def show
@@ -24,13 +24,13 @@ class CatchesController < ApplicationController
 	def update 
 		catch = Catch.find(params[:id])
 		catch.update_attributes(catch_params)
-		redirect_to catches_path
+		redirect_to catch_path
 	end
 
 	def destroy
 		catch = Catch.find(params[:id])
 		catch.destroy
-		redirect_to catches_path
+		redirect_to catch_path
 	end
 
 	private
