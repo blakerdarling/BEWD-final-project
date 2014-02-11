@@ -7,9 +7,9 @@
 	<li><%= catch.date.strftime(" %a  %b #{catch.date.day.ordinalize}, %Y ") %><%= link_to "Edit", edit_catch_path(catch) %></li> 
 	<ul>
 		<% if catch.image_url != ''%>
-		<%= link_to catch.species, catch.image_url %></li>
+		<%= link_to Species.name, catch.image_url %></li>
 		<% else %>
-		<%= catch.species %>
+		<%= Species.name %>
 		<% end %>
 		<li>Lure:  <%= catch.lure %></li>
 		<li>Weight (lbs.):  <%= catch.weight %></li>

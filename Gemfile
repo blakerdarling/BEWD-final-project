@@ -13,6 +13,12 @@ group :development do
 	gem 'sqlite3'
 end
 
+gem "jquery-rails", "< 2.3.0"
+
+gem 'turbolinks'
+
+gem 'rails3-jquery-autocomplete'
+
 gem 'simple_form'
 
 gem 'forecast_io'
@@ -39,7 +45,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+
+gem "jquery-ui-rails"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

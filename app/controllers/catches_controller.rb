@@ -1,4 +1,6 @@
 class CatchesController < ApplicationController
+	autocomplete :species, :name, :full => true
+
 	def index
 		@catches = Catch.all.sort_by { |c| c.date }.reverse!
 	end
@@ -24,7 +26,7 @@ class CatchesController < ApplicationController
 	def update 
 		catch = Catch.find(params[:id])
 		catch.update_attributes(catch_params)
-		redirect_to catch_path
+		redirect_to catches_path
 	end
 
 	def destroy
@@ -35,6 +37,6 @@ class CatchesController < ApplicationController
 
 	private
 	def catch_params
-		params.require(:catch).permit(:date, :species, :lure, :weight, :length, :image_url, :zip_code, :notes )
+		params.require(:catch).permit(:date, :species, :lure, :weight, :length, :image_url, :zip_code, :notes, :species_id )
 	end
 end

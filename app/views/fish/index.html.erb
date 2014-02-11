@@ -4,10 +4,10 @@
 	<br>
 	<li><%= fish.date.strftime(" %a  %b #{fish.date.day.ordinalize}, %Y ") %><%= link_to "Edit", edit_fish_path(fish) %></li> 
 	<ul>
-		<% if fish.image_url != ''%>
-		<%= link_to fish.species, fish.image_url %></li>
+		<% if catch.image_url != ''%>
+		<%= link_to @catch.name, fish.image_url %></li>
 		<% else %>
-		<%= fish.species %>
+		<%= @catch.name %>
 		<% end %>
 		<li>Lure:  <%= fish.lure %></li>
 		<li>Weight (lbs.):  <%= fish.weight %></li>

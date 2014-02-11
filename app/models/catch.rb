@@ -1,10 +1,6 @@
 class Catch < ActiveRecord::Base
 	belongs_to :user
-	
-
-	def species_and_weight
-		"#{species} weighs #{weight} lbs"	
-	end
+	belongs_to :species
 
 	def forecast
 		if zip_code.blank?

@@ -2,7 +2,10 @@ LureLog::Application.routes.draw do
   devise_for :users
   root 'catches#index'
   resources :users
-  resources :catches
+  #resources :catches 
+  resources :catches do
+    get :autocomplete_species_name, :on => :collection
+  end
 
 
 
