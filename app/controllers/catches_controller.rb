@@ -37,6 +37,6 @@ class CatchesController < ApplicationController
 
 	private
 	def catch_params
-		params.require(:catch).permit(:date, :species, :lure, :weight, :length, :image_url, :zip_code, :notes, :species_id )
+		params.require(:catch).permit(:date, :lure, :weight, :length, :image_url, :zip_code, :notes, :species_id )
 	end
 end
